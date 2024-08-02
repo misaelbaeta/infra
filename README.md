@@ -11,25 +11,36 @@
 
 #### 1.
     
-    Access folder Infra and Run to create:
-     - bucket and state
+    Access folder Infra and Run:
+        terraform init
+        terraform apply
 
-    *terraform init* 
-    *terraform apply* 
-    
-    
-
+    to create:
+     - bucket
+     - tfstate
 
 
 #### 2.
-    Access folder Network and Run to create 
-Terraform init
-Terraform Apply to:
- - Create VPC 
- - Public and Private subnets
- - Internet_gateway
+    Access folder Network and Run:
+        terraform init
+        terraform apply
+
+    to create:
+     - vpc
+     - public_subnets
+     - private_subnets
+     - Internet Gateway
+     - Nat Gateway
+     - Route tables
+
 
 #### 3.
-cd Path: *eks/*  
-Terraform init
-Terraform Apply
+    Access folder EKS and Run:  
+        terraform init
+        terraform apply
+
+    to create:
+    - datasource
+    - eks
+    - eks-sg
+
