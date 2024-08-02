@@ -29,6 +29,7 @@ resource "aws_subnet" "public_subnets" {
   tags = {
     Name      = "Public Subnet ${count.index + 1}"
     Terraform = "True"
+    Public    = "True"
   }
 }
 
@@ -42,6 +43,7 @@ resource "aws_subnet" "private_subnets" {
   tags = {
     Name      = "Private Subnet ${count.index + 1}"
     Terraform = "True"
+    Private   = "True"
   }
 }
 
@@ -142,4 +144,18 @@ resource "aws_route_table_association" "private_subnet_asso" {
   count          = length(var.private_subnet_cidrs)
   subnet_id      = element(aws_subnet.private_subnets[*].id, count.index)
   route_table_id = aws_route_table.private_rt.id
+}
+
+
+# Outputs para as subnets
+output "public_subnet_ids" {
+  value = aws_subnet.public_subnets[*].id
+}
+
+output "private_subnet_ids" {
+  value = aws_subnet.private_subnets[*].id
+}
+
+output "vpc_id" {
+  value = module.vpc.vpc_id
 }
