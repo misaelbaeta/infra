@@ -2,6 +2,10 @@
 resource "aws_security_group" "node_group" {
   name_prefix = "node-group"
   vpc_id      = data.terraform_remote_state.vpc.outputs.vpc_id
+
+  tags = {
+    Name = "node-group"
+  }
 }
 
 resource "aws_security_group_rule" "node_group_inbound" {
