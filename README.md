@@ -11,7 +11,9 @@
 
 #### 1.
     
-    1. Access folder Infra and Run 
+    1. Access folder Infra and Run \n
+
+
     ```bash
     terraform init 
     terraform apply 
