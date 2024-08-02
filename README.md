@@ -10,7 +10,7 @@
 
 
 #### 1.
-    ```markdown
+    
     1. Access folder Infra and Run 
     ```bash
     terraform init 
