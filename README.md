@@ -11,19 +11,18 @@
 
 #### 1.
     
-    1. Access folder Infra and Run
+    Access folder Infra and Run to create:
+     - bucket and state
 
-
-
-    terraform init 
-    terraform apply 
+    *terraform init* 
+    *terraform apply* 
     
-    on /Infra
+    
 
 
 
 #### 2.
-cd Path: *network/*  
+    Access folder Network and Run to create 
 Terraform init
 Terraform Apply to:
  - Create VPC 
